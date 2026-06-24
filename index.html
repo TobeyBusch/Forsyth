@@ -1,486 +1,1028 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>267 Dickens Cir, Forsyth MO | Home For Sale By Owner</title>
-    <meta name="description" content="5 bed, 3 bath home on 1.03 acres in Forsyth, MO. Solar powered, massive carport, walkout basement. $329,000. For Sale By Owner.">
+    <meta
+      name="description"
+      content="5 bed, 3 bath home on 1.03 acres in Forsyth, MO. Solar powered, massive carport, walkout basement. $329,000. For Sale By Owner."
+    />
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; color: #222; background: #fff; }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        color: #222;
+        background: #fff;
+      }
 
-        .hero {
-            position: relative;
-            width: 100%;
-            height: 70vh;
-            min-height: 400px;
-            overflow: hidden;
-        }
-        .hero img { width: 100%; height: 100%; object-fit: cover; }
-        .hero-overlay {
-            position: absolute;
-            bottom: 0; left: 0; right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.75));
-            padding: 40px 30px 30px;
-        }
-        .hero-overlay .tag {
-            display: inline-block;
-            background: #2e7d32;
-            color: #fff;
-            padding: 5px 14px;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            border-radius: 3px;
-            margin-bottom: 12px;
-        }
-        .hero-overlay h1 { color: #fff; font-size: 32px; font-weight: 700; margin-bottom: 6px; }
-        .hero-overlay .subtitle { color: #ddd; font-size: 16px; }
-        .hero-overlay .price { color: #fff; font-size: 36px; font-weight: 800; margin-top: 8px; }
+      .hero {
+        position: relative;
+        width: 100%;
+        height: 70vh;
+        min-height: 400px;
+        overflow: hidden;
+      }
+      .hero img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .hero-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+        padding: 40px 30px 30px;
+      }
+      .hero-overlay .tag {
+        display: inline-block;
+        background: #2e7d32;
+        color: #fff;
+        padding: 5px 14px;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        border-radius: 3px;
+        margin-bottom: 12px;
+      }
+      .hero-overlay h1 {
+        color: #fff;
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+      .hero-overlay .subtitle {
+        color: #ddd;
+        font-size: 16px;
+      }
+      .hero-overlay .price {
+        color: #fff;
+        font-size: 36px;
+        font-weight: 800;
+        margin-top: 8px;
+      }
 
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            padding: 20px;
-            background: #1b3a1b;
-            color: #fff;
-            flex-wrap: wrap;
-        }
-        .stat { text-align: center; }
-        .stat .num { font-size: 22px; font-weight: 700; }
-        .stat .label { font-size: 12px; color: #aab; letter-spacing: 0.5px; }
+      .stats {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 20px;
+        background: #1b3a1b;
+        color: #fff;
+        flex-wrap: wrap;
+      }
+      .stat {
+        text-align: center;
+      }
+      .stat .num {
+        font-size: 22px;
+        font-weight: 700;
+      }
+      .stat .label {
+        font-size: 12px;
+        color: #aab;
+        letter-spacing: 0.5px;
+      }
 
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        .section { padding: 40px 0; }
-        .section:nth-child(even) { background: #f7f7f7; }
-        .section h2 {
-            font-size: 24px;
-            color: #1b3a1b;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #2e7d32;
-            display: inline-block;
-        }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .section {
+        padding: 40px 0;
+      }
+      .section:nth-child(even) {
+        background: #f7f7f7;
+      }
+      .section h2 {
+        font-size: 24px;
+        color: #1b3a1b;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 3px solid #2e7d32;
+        display: inline-block;
+      }
 
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-        .feature-card {
-            background: #fff;
-            border-radius: 8px;
-            padding: 22px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-        .feature-card h3 { font-size: 16px; color: #1b3a1b; margin-bottom: 10px; }
-        .feature-card h3 .icon { margin-right: 8px; }
-        .feature-card ul { list-style: none; padding: 0; }
-        .feature-card ul li { padding: 4px 0; font-size: 14px; color: #444; line-height: 1.5; }
-        .feature-card ul li::before { content: "\2022"; color: #2e7d32; font-weight: bold; margin-right: 8px; }
-        .feature-card p { font-size: 14px; color: #444; line-height: 1.6; }
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+      }
+      .feature-card {
+        background: #fff;
+        border-radius: 8px;
+        padding: 22px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+      .feature-card h3 {
+        font-size: 16px;
+        color: #1b3a1b;
+        margin-bottom: 10px;
+      }
+      .feature-card h3 .icon {
+        margin-right: 8px;
+      }
+      .feature-card ul {
+        list-style: none;
+        padding: 0;
+      }
+      .feature-card ul li {
+        padding: 4px 0;
+        font-size: 14px;
+        color: #444;
+        line-height: 1.5;
+      }
+      .feature-card ul li::before {
+        content: "\2022";
+        color: #2e7d32;
+        font-weight: bold;
+        margin-right: 8px;
+      }
+      .feature-card p {
+        font-size: 14px;
+        color: #444;
+        line-height: 1.6;
+      }
 
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 8px;
-        }
-        .gallery-grid img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-        .gallery-grid img:hover { transform: scale(1.02); }
-        .gallery-grid .caption { font-size: 12px; color: #666; text-align: center; padding: 4px 0; }
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 8px;
+      }
+      .gallery-grid img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+      .gallery-grid img:hover {
+        transform: scale(1.02);
+      }
+      .gallery-grid .caption {
+        font-size: 12px;
+        color: #666;
+        text-align: center;
+        padding: 4px 0;
+      }
 
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.92);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        .lightbox.active { display: flex; }
-        .lightbox img { max-width: 90vw; max-height: 80vh; object-fit: contain; border-radius: 4px; }
-        .lightbox .caption { color: #ccc; margin-top: 10px; font-size: 14px; }
-        .lightbox .close { position: absolute; top: 20px; right: 30px; color: #fff; font-size: 36px; cursor: pointer; z-index: 1001; }
-        .lightbox .nav { position: absolute; top: 50%; transform: translateY(-50%); color: #fff; font-size: 48px; cursor: pointer; padding: 20px; user-select: none; }
-        .lightbox .nav.prev { left: 10px; }
-        .lightbox .nav.next { right: 10px; }
+      .lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.92);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .lightbox.active {
+        display: flex;
+      }
+      .lightbox img {
+        max-width: 90vw;
+        max-height: 80vh;
+        object-fit: contain;
+        border-radius: 4px;
+      }
+      .lightbox .caption {
+        color: #ccc;
+        margin-top: 10px;
+        font-size: 14px;
+      }
+      .lightbox .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        color: #fff;
+        font-size: 36px;
+        cursor: pointer;
+        z-index: 1001;
+      }
+      .lightbox .nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff;
+        font-size: 48px;
+        cursor: pointer;
+        padding: 20px;
+        user-select: none;
+      }
+      .lightbox .nav.prev {
+        left: 10px;
+      }
+      .lightbox .nav.next {
+        right: 10px;
+      }
 
-        .agent-notice {
-            background: #eef6ee;
-            text-align: center;
-            padding: 30px 20px;
-        }
-        .agent-notice h2 { border-bottom-color: #1b3a1b; }
-        .agent-notice p { font-size: 16px; color: #333; max-width: 700px; margin: 0 auto; line-height: 1.7; }
+      .agent-notice {
+        background: #eef6ee;
+        text-align: center;
+        padding: 30px 20px;
+      }
+      .agent-notice h2 {
+        border-bottom-color: #1b3a1b;
+      }
+      .agent-notice p {
+        font-size: 16px;
+        color: #333;
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.7;
+      }
 
-        .contact-bar {
-            background: #1b3a1b;
-            color: #fff;
-            padding: 30px 20px;
-            text-align: center;
-        }
-        .contact-bar h2 { font-size: 20px; margin-bottom: 15px; border: none; color: #fff; }
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-        .contact-info .name { font-size: 24px; font-weight: 700; }
-        .contact-info .fsbo { font-size: 13px; color: #aab; }
-        .contact-info a { color: #fff; text-decoration: none; font-size: 16px; font-weight: 600; }
-        .contact-info a:hover { text-decoration: underline; }
+      .contact-bar {
+        background: #1b3a1b;
+        color: #fff;
+        padding: 30px 20px;
+        text-align: center;
+      }
+      .contact-bar h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        border: none;
+        color: #fff;
+      }
+      .contact-info {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .contact-info .name {
+        font-size: 24px;
+        font-weight: 700;
+      }
+      .contact-info .fsbo {
+        font-size: 13px;
+        color: #aab;
+      }
+      .contact-info a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+      }
+      .contact-info a:hover {
+        text-decoration: underline;
+      }
 
-        .cta-btn {
-            display: inline-block;
-            background: #2e7d32;
-            color: #fff;
-            padding: 12px 30px;
-            font-size: 16px;
-            font-weight: 700;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 15px;
-            transition: background 0.2s;
-        }
-        .cta-btn:hover { background: #256428; }
+      .cta-btn {
+        display: inline-block;
+        background: #2e7d32;
+        color: #fff;
+        padding: 12px 30px;
+        font-size: 16px;
+        font-weight: 700;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-top: 15px;
+        transition: background 0.2s;
+      }
+      .cta-btn:hover {
+        background: #256428;
+      }
 
+      .side-nav {
+        position: fixed;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        z-index: 900;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .side-nav a {
+        background: #1b3a1b;
+        color: #fff;
+        padding: 8px 12px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 600;
+        white-space: nowrap;
+        transition: background 0.2s;
+      }
+      .side-nav a:hover {
+        background: #2e7d32;
+      }
+      @media (max-width: 600px) {
         .side-nav {
-            position: fixed;
-            top: 50%;
-            right: 15px;
-            transform: translateY(-50%);
-            z-index: 900;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
+          right: 5px;
         }
         .side-nav a {
-            background: #1b3a1b;
-            color: #fff;
-            padding: 8px 12px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 12px;
-            font-weight: 600;
-            white-space: nowrap;
-            transition: background 0.2s;
+          padding: 6px 8px;
+          font-size: 11px;
         }
-        .side-nav a:hover { background: #2e7d32; }
-        @media (max-width: 600px) {
-            .side-nav { right: 5px; }
-            .side-nav a { padding: 6px 8px; font-size: 11px; }
-        }
+      }
 
-        footer {
-            text-align: center;
-            padding: 15px;
-            font-size: 12px;
-            color: #999;
-            background: #111;
-        }
+      footer {
+        text-align: center;
+        padding: 15px;
+        font-size: 12px;
+        color: #999;
+        background: #111;
+      }
 
-        @media (max-width: 600px) {
-            .hero-overlay h1 { font-size: 22px; }
-            .hero-overlay .price { font-size: 28px; }
-            .stats { gap: 15px; }
-            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-            .gallery-grid img { height: 150px; }
+      @media (max-width: 600px) {
+        .hero-overlay h1 {
+          font-size: 22px;
         }
+        .hero-overlay .price {
+          font-size: 28px;
+        }
+        .stats {
+          gap: 15px;
+        }
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .gallery-grid img {
+          height: 150px;
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- SIDE NAV -->
+    <nav class="side-nav">
+      <a href="#top">Top</a>
+      <a href="#about">About</a>
+      <a href="#solar">Solar</a>
+      <a href="#exterior">Exterior</a>
+      <a href="#main-level">Main Level</a>
+      <a href="#basement">Basement</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-<!-- SIDE NAV -->
-<nav class="side-nav">
-    <a href="#top">Top</a>
-    <a href="#about">About</a>
-    <a href="#solar">Solar</a>
-    <a href="#exterior">Exterior</a>
-    <a href="#main-level">Main Level</a>
-    <a href="#basement">Basement</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<!-- HERO -->
-<div class="hero" id="top">
-    <img src="images/hero.jpg" alt="267 Dickens Cir, Forsyth MO - Front of Home">
-    <div class="hero-overlay">
+    <!-- HERO -->
+    <div class="hero" id="top">
+      <img
+        src="images/hero.jpg"
+        alt="267 Dickens Cir, Forsyth MO - Front of Home"
+      />
+      <div class="hero-overlay">
         <span class="tag">FOR SALE BY OWNER</span>
         <h1>267 Dickens Cir</h1>
         <div class="subtitle">Forsyth, MO 65653</div>
         <div class="price">$329,000</div>
+      </div>
     </div>
-</div>
 
-<!-- QUICK STATS -->
-<div class="stats">
-    <div class="stat"><div class="num">5</div><div class="label">BEDROOMS</div></div>
-    <div class="stat"><div class="num">3</div><div class="label">BATHROOMS</div></div>
-    <div class="stat"><div class="num">2,900+</div><div class="label">SQ FT</div></div>
-    <div class="stat"><div class="num">1.03</div><div class="label">ACRES</div></div>
-    <div class="stat"><div class="num">&#10003;</div><div class="label">SOLAR POWERED</div></div>
-    <div class="stat"><div class="num">&#10003;</div><div class="label">20x40 CARPORT</div></div>
-</div>
+    <!-- QUICK STATS -->
+    <div class="stats">
+      <div class="stat">
+        <div class="num">5</div>
+        <div class="label">BEDROOMS</div>
+      </div>
+      <div class="stat">
+        <div class="num">3</div>
+        <div class="label">BATHROOMS</div>
+      </div>
+      <div class="stat">
+        <div class="num">2,900+</div>
+        <div class="label">SQ FT</div>
+      </div>
+      <div class="stat">
+        <div class="num">1.03</div>
+        <div class="label">ACRES</div>
+      </div>
+      <div class="stat">
+        <div class="num">&#10003;</div>
+        <div class="label">SOLAR POWERED</div>
+      </div>
+      <div class="stat">
+        <div class="num">&#10003;</div>
+        <div class="label">20x40 CARPORT</div>
+      </div>
+    </div>
 
-<!-- ABOUT -->
-<div class="section" id="about">
-    <div class="container">
+    <!-- ABOUT -->
+    <div class="section" id="about">
+      <div class="container">
         <h2>About the Property</h2>
         <div class="features">
-            <div class="feature-card">
-                <h3><span class="icon">&#9889;</span> Energy Independent</h3>
-                <ul>
-                    <li>Massive 32-panel ground solar array</li>
-                    <li>Each panel has its own dedicated inverter</li>
-                    <li>Sunlight backup system included</li>
-                    <li>Near-zero electricity costs</li>
-                </ul>
-            </div>
-            <div class="feature-card">
-                <h3><span class="icon">&#8962;</span> Main Level</h3>
-                <ul>
-                    <li>Private master suite</li>
-                    <li>Dedicated dressing room</li>
-                    <li>Private deck off master</li>
-                    <li>Built-in office</li>
-                </ul>
-            </div>
-            <div class="feature-card">
-                <h3><span class="icon">&#128736;</span> Major Upgrades</h3>
-                <ul>
-                    <li>Lifetime shingle roof (~10 years ago)</li>
-                    <li>New AC system (~7 years ago)</li>
-                    <li>Hybrid heat pump water heater (~5 years ago)</li>
-                    <li>32-panel ground solar array (installed Sept 2022)</li>
-                    <li>New carpet upstairs and downstairs</li>
-                    <li>Fresh paint throughout most of the home</li>
-                    <li>Trim freshly painted</li>
-                </ul>
-            </div>
-            <div class="feature-card">
-                <h3><span class="icon">&#9660;</span> Walkout Basement</h3>
-                <ul>
-                    <li>Fully finished &ndash; guest suite or secondary living space</li>
-                    <li>Kitchenette included</li>
-                    <li>Wood-burning stove for backup heat</li>
-                    <li>Bonus room / spacious 5th bedroom</li>
-                </ul>
-            </div>
-            <div class="feature-card">
-                <h3><span class="icon">&#9951;</span> Massive Carport &amp; Storage</h3>
-                <ul>
-                    <li>20x40 metal carport (800 sq ft)</li>
-                    <li>High clearance over clean gravel base</li>
-                    <li>Fits Class C motorhomes, large boats, multiple trucks</li>
-                    <li>Save thousands in annual off-site storage fees</li>
-                </ul>
-            </div>
-            <div class="feature-card">
-                <h3><span class="icon">&#127796;</span> Outdoor Living</h3>
-                <ul>
-                    <li>1.03-acre lot</li>
-                    <li>Multiple outdoor decks for entertaining</li>
-                    <li>10 minute drive to Shadow Rock Park with public boat dock to Bull Shoals Lake</li>
-                    <li>Ample parking for boats, RVs, trailers</li>
-                </ul>
-            </div>
-            <div class="feature-card">
-                <h3><span class="icon">&#9733;</span> Why This Property?</h3>
-                <p>Over 2,900 sq ft of versatile living space with complete utility independence, heavy-duty storage, and a walkout basement guest suite. Short 30 minute drive to Branson, MO. Perfect for families, outdoor enthusiasts, or anyone seeking energy-free living in the Ozarks.</p>
-            </div>
+          <div class="feature-card">
+            <h3><span class="icon">&#9889;</span> Energy Independent</h3>
+            <ul>
+              <li>Massive 32-panel ground solar array</li>
+              <li>Each panel has its own dedicated inverter</li>
+              <li>Sunlight backup system included</li>
+              <li>Near-zero electricity costs</li>
+            </ul>
+          </div>
+          <div class="feature-card">
+            <h3><span class="icon">&#8962;</span> Main Level</h3>
+            <ul>
+              <li>Private master suite</li>
+              <li>Dedicated dressing room</li>
+              <li>Private deck off master</li>
+              <li>Built-in office</li>
+            </ul>
+          </div>
+          <div class="feature-card">
+            <h3><span class="icon">&#128736;</span> Major Upgrades</h3>
+            <ul>
+              <li>Lifetime shingle roof (~10 years ago)</li>
+              <li>New AC system (~7 years ago)</li>
+              <li>Hybrid heat pump water heater (~5 years ago)</li>
+              <li>32-panel ground solar array (installed Sept 2022)</li>
+              <li>New carpet upstairs and downstairs</li>
+              <li>Fresh paint throughout most of the home</li>
+              <li>Trim freshly painted</li>
+            </ul>
+          </div>
+          <div class="feature-card">
+            <h3><span class="icon">&#9660;</span> Walkout Basement</h3>
+            <ul>
+              <li>
+                Fully finished &ndash; guest suite or secondary living space
+              </li>
+              <li>Kitchenette included</li>
+              <li>Wood-burning stove for backup heat</li>
+              <li>Bonus room / spacious 5th bedroom</li>
+            </ul>
+          </div>
+          <div class="feature-card">
+            <h3>
+              <span class="icon">&#9951;</span> Massive Carport &amp; Storage
+            </h3>
+            <ul>
+              <li>20x40 metal carport (800 sq ft)</li>
+              <li>High clearance over clean gravel base</li>
+              <li>Fits Class C motorhomes, large boats, multiple trucks</li>
+              <li>Save thousands in annual off-site storage fees</li>
+            </ul>
+          </div>
+          <div class="feature-card">
+            <h3><span class="icon">&#127796;</span> Outdoor Living</h3>
+            <ul>
+              <li>1.03-acre lot</li>
+              <li>Multiple outdoor decks for entertaining</li>
+              <li>
+                10 minute drive to Shadow Rock Park with public boat dock to
+                Bull Shoals Lake
+              </li>
+              <li>Ample parking for boats, RVs, trailers</li>
+            </ul>
+          </div>
+          <div class="feature-card">
+            <h3><span class="icon">&#9733;</span> Why This Property?</h3>
+            <p>
+              Over 2,900 sq ft of versatile living space with complete utility
+              independence, heavy-duty storage, and a walkout basement guest
+              suite. Short 30 minute drive to Branson, MO. Perfect for families,
+              outdoor enthusiasts, or anyone seeking energy-free living in the
+              Ozarks.
+            </p>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
-<!-- SOLAR PERFORMANCE -->
-<div class="section" id="solar">
-    <div class="container">
+    <!-- SOLAR PERFORMANCE -->
+    <div class="section" id="solar">
+      <div class="container">
         <h2>&#9889; Solar Performance Data</h2>
-        <p style="font-size:15px; color:#444; margin-bottom:8px; line-height:1.6;">This 32-panel ground-mounted solar array has produced <strong>16,076 kWh</strong> over the past year while the home consumed only <strong>6,080 kWh</strong> &mdash; a <strong>345% coverage ratio</strong>. Net surplus exported to the grid: <strong>9,996 kWh</strong>.</p>
-        <div class="gallery-grid" style="grid-template-columns: 1fr; gap:20px; margin-top:20px;">
-            <img src="images/solar-production-vs-consumption.png" alt="Solar Production vs Consumption" style="height:auto; cursor:default;">
-            <img src="images/solar-grid-exchange.png" alt="Grid Export vs Import" style="height:auto; cursor:default;">
-            <img src="images/solar-monthly-summary.png" alt="Monthly Summary" style="height:auto; cursor:default;">
-            <img src="images/solar-coverage-ratio.png" alt="Solar Coverage Ratio" style="height:auto; cursor:default;">
+        <p
+          style="
+            font-size: 15px;
+            color: #444;
+            margin-bottom: 8px;
+            line-height: 1.6;
+          "
+        >
+          This 32-panel ground-mounted solar array has produced
+          <strong>16,076 kWh</strong> over the past year while the home consumed
+          only <strong>6,080 kWh</strong> &mdash; a
+          <strong>345% coverage ratio</strong>. Net surplus exported to the
+          grid: <strong>9,996 kWh</strong>.
+        </p>
+        <div
+          class="gallery-grid"
+          style="grid-template-columns: 1fr; gap: 20px; margin-top: 20px"
+        >
+          <img
+            src="images/solar-production-vs-consumption.png"
+            alt="Solar Production vs Consumption"
+            style="height: auto; cursor: default"
+          />
+          <img
+            src="images/solar-grid-exchange.png"
+            alt="Grid Export vs Import"
+            style="height: auto; cursor: default"
+          />
+          <img
+            src="images/solar-monthly-summary.png"
+            alt="Monthly Summary"
+            style="height: auto; cursor: default"
+          />
+          <img
+            src="images/solar-coverage-ratio.png"
+            alt="Solar Coverage Ratio"
+            style="height: auto; cursor: default"
+          />
         </div>
+      </div>
     </div>
-</div>
 
-<!-- PHOTO GALLERY -->
-<div class="section" id="photos">
-    <div class="container">
+    <!-- PHOTO GALLERY -->
+    <div class="section" id="photos">
+      <div class="container">
         <h2 id="exterior">Exterior</h2>
         <div class="gallery-grid">
-            <div><img src="images/exterior/front-of-house.jpg" alt="Front of House" onclick="openLightbox(0)"><div class="caption">Front of House</div></div>
-            <div><img src="images/exterior/front-porch.jpg" alt="Front Porch" onclick="openLightbox(1)"><div class="caption">Front Porch</div></div>
-            <div><img src="images/exterior/right-side.jpg" alt="Right Side of House" onclick="openLightbox(2)"><div class="caption">Right Side of House</div></div>
-            <div><img src="images/exterior/solar-panels.jpg" alt="Solar Panels" onclick="openLightbox(3)"><div class="caption">Solar Panels</div></div>
-            <div><img src="images/exterior/yard-toward-panels.jpg" alt="Yard toward Panels" onclick="openLightbox(4)"><div class="caption">Yard toward Panels</div></div>
-            <div><img src="images/exterior/basement-deck.jpg" alt="Basement Deck" onclick="openLightbox(5)"><div class="caption">Basement Deck</div></div>
-            <div><img src="images/exterior/balcony.jpg" alt="Balcony" onclick="openLightbox(6)"><div class="caption">Balcony</div></div>
+          <div>
+            <img
+              src="images/exterior/front-of-house.jpg"
+              alt="Front of House"
+              onclick="openLightbox(0)"
+            />
+            <div class="caption">Front of House</div>
+          </div>
+          <div>
+            <img
+              src="images/exterior/front-porch.jpg"
+              alt="Front Porch"
+              onclick="openLightbox(1)"
+            />
+            <div class="caption">Front Porch</div>
+          </div>
+          <div>
+            <img
+              src="images/exterior/right-side.jpg"
+              alt="Right Side of House"
+              onclick="openLightbox(2)"
+            />
+            <div class="caption">Right Side of House</div>
+          </div>
+          <div>
+            <img
+              src="images/exterior/solar-panels.jpg"
+              alt="Solar Panels"
+              onclick="openLightbox(3)"
+            />
+            <div class="caption">Solar Panels</div>
+          </div>
+          <div>
+            <img
+              src="images/exterior/yard-toward-panels.jpg"
+              alt="Yard toward Panels"
+              onclick="openLightbox(4)"
+            />
+            <div class="caption">Yard toward Panels</div>
+          </div>
+          <div>
+            <img
+              src="images/exterior/basement-deck.jpg"
+              alt="Basement Deck"
+              onclick="openLightbox(5)"
+            />
+            <div class="caption">Basement Deck</div>
+          </div>
+          <div>
+            <img
+              src="images/exterior/balcony.jpg"
+              alt="Balcony"
+              onclick="openLightbox(6)"
+            />
+            <div class="caption">Balcony</div>
+          </div>
         </div>
 
-        <h2 style="margin-top:40px;" id="main-level">Main Level</h2>
+        <h2 style="margin-top: 40px" id="main-level">Main Level</h2>
         <div class="gallery-grid">
-            <div><img src="images/exterior/entry.jpg" alt="Entry" onclick="openLightbox(7)"><div class="caption">Entry</div></div>
-            <div><img src="images/upstairs/kitchen.jpg" alt="Kitchen" onclick="openLightbox(8)"><div class="caption">Kitchen</div></div>
-            <div><img src="images/upstairs/kitchen-downstairs-view.jpg" alt="Kitchen With Downstairs View" onclick="openLightbox(9)"><div class="caption">Kitchen (Downstairs View)</div></div>
-            <div><img src="images/upstairs/office-looking-out.jpg" alt="Office Looking Out" onclick="openLightbox(11)"><div class="caption">Office (Looking Out)</div></div>
-            <div><img src="images/upstairs/living-room.jpg" alt="Living Room" onclick="openLightbox(12)"><div class="caption">Living Room</div></div>
-            <div><img src="images/upstairs/living-room-revised.jpg" alt="Living Room" onclick="openLightbox(13)"><div class="caption">Living Room</div></div>
-            <div><img src="images/upstairs/hallway.jpg" alt="Hallway" onclick="openLightbox(14)"><div class="caption">Hallway</div></div>
-            <div><img src="images/upstairs/laundry.jpg" alt="Laundry" onclick="openLightbox(15)"><div class="caption">Laundry</div></div>
-            <div><img src="images/upstairs/master-bedroom.jpg" alt="Master Bedroom" onclick="openLightbox(16)"><div class="caption">Master Bedroom</div></div>
-            <div><img src="images/upstairs/master-bath-1.jpg" alt="Master Bath" onclick="openLightbox(17)"><div class="caption">Master Bath</div></div>
-            <div><img src="images/upstairs/master-bath-2.jpg" alt="Master Bath 2" onclick="openLightbox(18)"><div class="caption">Master Bath</div></div>
-            <div><img src="images/upstairs/master-bath-3.jpg" alt="Master Bath 3" onclick="openLightbox(19)"><div class="caption">Master Bath</div></div>
-            <div><img src="images/upstairs/main-bath.jpg" alt="Main Bath" onclick="openLightbox(20)"><div class="caption">Main Bath</div></div>
-            <div><img src="images/upstairs/master-vanity-1.jpg" alt="Master Vanity" onclick="openLightbox(21)"><div class="caption">Master Vanity</div></div>
-            <div><img src="images/upstairs/master-vanity-2.jpg" alt="Master Vanity 2" onclick="openLightbox(22)"><div class="caption">Master Vanity</div></div>
-            <div><img src="images/upstairs/master-vanity-3.jpg" alt="Master Vanity 3" onclick="openLightbox(23)"><div class="caption">Master Vanity</div></div>
-            <div><img src="images/upstairs/vanity-balcony.jpg" alt="Vanity Balcony" onclick="openLightbox(24)"><div class="caption">Vanity Balcony</div></div>
-            <div><img src="images/upstairs/bedroom-by-master.jpg" alt="Bedroom By Master" onclick="openLightbox(25)"><div class="caption">Bedroom By Master</div></div>
-            <div><img src="images/upstairs/bedroom-by-master-inside.jpg" alt="Bedroom By Master Inside" onclick="openLightbox(26)"><div class="caption">Bedroom By Master (Inside)</div></div>
-            <div><img src="images/upstairs/bathroom-1.jpg" alt="Upstairs Bathroom" onclick="openLightbox(27)"><div class="caption">Bathroom</div></div>
-            <div><img src="images/upstairs/bathroom-2.jpg" alt="Upstairs Bathroom 2" onclick="openLightbox(28)"><div class="caption">Bathroom</div></div>
+          <div>
+            <img
+              src="images/exterior/entry.jpg"
+              alt="Entry"
+              onclick="openLightbox(7)"
+            />
+            <div class="caption">Entry</div>
+          </div>
+          <div>
+            <img
+              src="images/upstairs/kitchen.jpg"
+              alt="Kitchen"
+              onclick="openLightbox(8)"
+            />
+            <div class="caption">Kitchen</div>
+          </div>
+          <div>
+            <img
+              src="images/upstairs/kitchen-downstairs-view.jpg"
+              alt="Kitchen With Downstairs View"
+              onclick="openLightbox(9)"
+            />
+            <div class="caption">Kitchen (Downstairs View)</div>
+          </div>
+          <div>
+            <img
+              src="images/upstairs/office-looking-out.jpg"
+              alt="Office Looking Out"
+              onclick="openLightbox(11)"
+            />
+            <div class="caption">Office (Looking Out)</div>
+          </div>
+          <div>
+            <img
+              src="images/upstairs/living-room.jpg"
+              alt="Living Room"
+              onclick="openLightbox(12)"
+            />
+            <div class="caption">Living Room</div>
+          </div>
+          <div>
+            <img
+              src="images/upstairs/living-room-revised.jpg"
+              alt="Living Room"
+              onclick="openLightbox(13)"
+            />
+            <div class="caption">Living Room</div>
+          </div>
+          <div>
+            <img
+              src="images/upstairs/hallway.jpg"
+              alt="Hallway"
+              onclick="openLightbox(14)"
+            />
+            <div class="caption">Hallway</div>
+          </div>
+          <div>
+            <img
+              src="images/upstairs/laundry.jpg"
+              alt="Laundry"
+              onclick="openLightbox(15)"
+            />
+            <div class="caption">Laundry</div>
+          </div>
+          <div>
+            <img
+              src="images/upstairs/master-bedroom.jpg"
+              alt="Master Bedroom"
+              onclick="openLightbox(16)"
+            />
+            <div class="caption">Master Bedroom</div>
+          </div>
+          <div>
+            <img
+              src="images/upstairs/master-bath-1.jpg"
+              alt="Master Bath"
+              onclick="openLightbox(17)"
+            />
+            <div class="caption">Master Bath</div>
+          </div>
+          <div>
+            <img
+              src="images/upstairs/master-bath-2.jpg"
+              alt="Master Bath 2"
+              onclick="openLightbox(18)"
+            />
+            <div class="caption">Master Bath</div>
+          </div>
+          <div>
+            <img
+              src="images/upstairs/master-bath-3.jpg"
+              alt="Master Bath 3"
+              onclick="openLightbox(19)"
+            />
+            <div class="caption">Master Bath</div>
+          </div>
+          <div>
+            <img
+              src="images/upstairs/main-bath.jpg"
+              alt="Main Bath"
+              onclick="openLightbox(20)"
+            />
+            <div class="caption">Main Bath</div>
+          </div>
+          <div>
+            <img
+              src="images/upstairs/master-vanity-1.jpg"
+              alt="Master Vanity"
+              onclick="openLightbox(21)"
+            />
+            <div class="caption">Master Vanity</div>
+          </div>
+          <div>
+            <img
+              src="images/upstairs/master-vanity-2.jpg"
+              alt="Master Vanity 2"
+              onclick="openLightbox(22)"
+            />
+            <div class="caption">Master Vanity</div>
+          </div>
+          <div>
+            <img
+              src="images/upstairs/master-vanity-3.jpg"
+              alt="Master Vanity 3"
+              onclick="openLightbox(23)"
+            />
+            <div class="caption">Master Vanity</div>
+          </div>
+          <div>
+            <img
+              src="images/upstairs/vanity-balcony.jpg"
+              alt="Vanity Balcony"
+              onclick="openLightbox(24)"
+            />
+            <div class="caption">Vanity Balcony</div>
+          </div>
+          <div>
+            <img
+              src="images/upstairs/bedroom-by-master.jpg"
+              alt="Bedroom By Master"
+              onclick="openLightbox(25)"
+            />
+            <div class="caption">Bedroom By Master</div>
+          </div>
+          <div>
+            <img
+              src="images/upstairs/bedroom-by-master-inside.jpg"
+              alt="Bedroom By Master Inside"
+              onclick="openLightbox(26)"
+            />
+            <div class="caption">Bedroom By Master (Inside)</div>
+          </div>
+          <div>
+            <img
+              src="images/upstairs/bathroom-1.jpg"
+              alt="Upstairs Bathroom"
+              onclick="openLightbox(27)"
+            />
+            <div class="caption">Bathroom</div>
+          </div>
+          <div>
+            <img
+              src="images/upstairs/bathroom-2.jpg"
+              alt="Upstairs Bathroom 2"
+              onclick="openLightbox(28)"
+            />
+            <div class="caption">Bathroom</div>
+          </div>
         </div>
 
-        <h2 style="margin-top:40px;" id="basement">Walkout Basement</h2>
+        <h2 style="margin-top: 40px" id="basement">Walkout Basement</h2>
         <div class="gallery-grid">
-            <div><img src="images/basement/living.jpg" alt="Basement Living" onclick="openLightbox(29)"><div class="caption">Living Area</div></div>
-            <div><img src="images/basement/kitchen.jpg" alt="Basement Kitchen" onclick="openLightbox(30)"><div class="caption">Kitchenette</div></div>
-            <div><img src="images/basement/dining-room.jpg" alt="Basement Dining Room" onclick="openLightbox(31)"><div class="caption">Dining Room</div></div>
-            <div><img src="images/basement/stairs-up.jpg" alt="Stairs Up" onclick="openLightbox(32)"><div class="caption">Stairs Up</div></div>
-            <div><img src="images/basement/stairs-down.jpg" alt="Stairs Down" onclick="openLightbox(33)"><div class="caption">Stairs Down</div></div>
-            <div><img src="images/basement/wood-stove-1.jpg" alt="Wood Stove" onclick="openLightbox(34)"><div class="caption">Wood Stove</div></div>
-            <div><img src="images/basement/wood-stove-2.jpg" alt="Wood Stove 2" onclick="openLightbox(35)"><div class="caption">Wood Stove</div></div>
-            <div><img src="images/basement/master-1.jpg" alt="Basement Master" onclick="openLightbox(36)"><div class="caption">Master Bedroom</div></div>
-            <div><img src="images/basement/master-2.jpg" alt="Basement Master 2" onclick="openLightbox(37)"><div class="caption">Master Bedroom</div></div>
-            <div><img src="images/basement/master-3.jpg" alt="Basement Master 3" onclick="openLightbox(38)"><div class="caption">Master Bedroom</div></div>
-            <div><img src="images/basement/bedroom.jpg" alt="Basement Bedroom" onclick="openLightbox(39)"><div class="caption">Bedroom</div></div>
-            <div><img src="images/basement/bedroom-closet.jpg" alt="Basement Bedroom Closet" onclick="openLightbox(40)"><div class="caption">Bedroom Closet</div></div>
-            <div><img src="images/basement/bathroom-1.jpg" alt="Basement Bathroom" onclick="openLightbox(41)"><div class="caption">Bathroom</div></div>
-            <div><img src="images/basement/bathroom-2.jpg" alt="Basement Bathroom 2" onclick="openLightbox(42)"><div class="caption">Bathroom</div></div>
+          <div>
+            <img
+              src="images/basement/living.jpg"
+              alt="Basement Living"
+              onclick="openLightbox(29)"
+            />
+            <div class="caption">Living Area</div>
+          </div>
+          <div>
+            <img
+              src="images/basement/kitchen.jpg"
+              alt="Basement Kitchen"
+              onclick="openLightbox(30)"
+            />
+            <div class="caption">Kitchenette</div>
+          </div>
+          <div>
+            <img
+              src="images/basement/dining-room.jpg"
+              alt="Basement Dining Room"
+              onclick="openLightbox(31)"
+            />
+            <div class="caption">Dining Room</div>
+          </div>
+          <div>
+            <img
+              src="images/basement/stairs-up.jpg"
+              alt="Stairs Up"
+              onclick="openLightbox(32)"
+            />
+            <div class="caption">Stairs Up</div>
+          </div>
+          <div>
+            <img
+              src="images/basement/stairs-down.jpg"
+              alt="Stairs Down"
+              onclick="openLightbox(33)"
+            />
+            <div class="caption">Stairs Down</div>
+          </div>
+          <div>
+            <img
+              src="images/basement/wood-stove-1.jpg"
+              alt="Wood Stove"
+              onclick="openLightbox(34)"
+            />
+            <div class="caption">Wood Stove</div>
+          </div>
+          <div>
+            <img
+              src="images/basement/wood-stove-2.jpg"
+              alt="Wood Stove 2"
+              onclick="openLightbox(35)"
+            />
+            <div class="caption">Wood Stove</div>
+          </div>
+          <div>
+            <img
+              src="images/basement/master-1.jpg"
+              alt="Living Room"
+              onclick="openLightbox(36)"
+            />
+            <div class="caption">Living Room</div>
+          </div>
+          <div>
+            <img
+              src="images/basement/master-2.jpg"
+              alt="Bonus/Bedroom  2"
+              onclick="openLightbox(37)"
+            />
+            <div class="caption">Bonus / Bedroom</div>
+          </div>
+          <div>
+            <img
+              src="images/basement/master-3.jpg"
+              alt="Bonus/ Bedroom  3"
+              onclick="openLightbox(38)"
+            />
+            <div class="caption">Bonus / Bedroom</div>
+          </div>
+          <div>
+            <img
+              src="images/basement/bedroom.jpg"
+              alt="Basement Bedroom"
+              onclick="openLightbox(39)"
+            />
+            <div class="caption">Bedroom</div>
+          </div>
+          <div>
+            <img
+              src="images/basement/bedroom-closet.jpg"
+              alt="Basement Bedroom Closet"
+              onclick="openLightbox(40)"
+            />
+            <div class="caption">Bedroom Closet</div>
+          </div>
+          <div>
+            <img
+              src="images/basement/bathroom-1.jpg"
+              alt="Basement Bathroom"
+              onclick="openLightbox(41)"
+            />
+            <div class="caption">Bathroom</div>
+          </div>
+          <div>
+            <img
+              src="images/basement/bathroom-2.jpg"
+              alt="Basement Bathroom 2"
+              onclick="openLightbox(42)"
+            />
+            <div class="caption">Bathroom</div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
-<!-- BUYER'S AGENT NOTICE -->
-<div class="agent-notice">
-    <div class="container">
+    <!-- BUYER'S AGENT NOTICE -->
+    <div class="agent-notice">
+      <div class="container">
         <h2>&#129309; Attention Buyer's Agents</h2>
-        <p>We welcome buyers represented by agents. The seller is willing to negotiate buyer's agent compensation as part of any offer. Please reach out directly to discuss terms.</p>
+        <p>
+          We welcome buyers represented by agents. The seller is willing to
+          negotiate buyer's agent compensation as part of any offer. Please
+          reach out directly to discuss terms.
+        </p>
+      </div>
     </div>
-</div>
 
-<!-- CONTACT -->
-<div class="contact-bar" id="contact">
-    <h2>Interested? Get in Touch</h2>
-    <div class="contact-info">
+    <!-- CONTACT -->
+    <div class="contact-bar" id="contact">
+      <h2>Interested? Get in Touch</h2>
+      <div class="contact-info">
         <div>
-            <div class="name">Tobey Busch</div>
-            <div class="fsbo">For Sale By Owner</div>
+          <div class="name">Tobey Busch</div>
+          <div class="fsbo">For Sale By Owner</div>
         </div>
         <div>
-            <a href="tel:+16608514323">&#9742; (660) 851-4323</a>
+          <a href="tel:+16608514323">&#9742; (660) 851-4323</a>
         </div>
+      </div>
+      <a href="tel:+16608514323" class="cta-btn">Call Now</a>
     </div>
-    <a href="tel:+16608514323" class="cta-btn">Call Now</a>
-</div>
 
-<footer>
-    267 Dickens Cir, Forsyth, MO 65653 &bull; For Sale By Owner &bull; $329,000
-</footer>
+    <footer>
+      267 Dickens Cir, Forsyth, MO 65653 &bull; For Sale By Owner &bull;
+      $329,000
+    </footer>
 
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-    <span class="close" onclick="closeLightbox()">&times;</span>
-    <span class="nav prev" onclick="navLightbox(-1)">&#10094;</span>
-    <img id="lb-img" src="" alt="">
-    <div class="caption" id="lb-caption"></div>
-    <span class="nav next" onclick="navLightbox(1)">&#10095;</span>
-</div>
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+      <span class="close" onclick="closeLightbox()">&times;</span>
+      <span class="nav prev" onclick="navLightbox(-1)">&#10094;</span>
+      <img id="lb-img" src="" alt="" />
+      <div class="caption" id="lb-caption"></div>
+      <span class="nav next" onclick="navLightbox(1)">&#10095;</span>
+    </div>
 
-<script>
-const photos = [
-    {src:"images/exterior/front-of-house.jpg",cap:"Front of House"},
-    {src:"images/exterior/front-porch.jpg",cap:"Front Porch"},
-    {src:"images/exterior/right-side.jpg",cap:"Right Side of House"},
-    {src:"images/exterior/solar-panels.jpg",cap:"Solar Panels"},
-    {src:"images/exterior/yard-toward-panels.jpg",cap:"Yard toward Panels"},
-    {src:"images/exterior/basement-deck.jpg",cap:"Basement Deck"},
-    {src:"images/exterior/balcony.jpg",cap:"Balcony"},
-    {src:"images/exterior/entry.jpg",cap:"Entry"},
-    {src:"images/upstairs/kitchen.jpg",cap:"Kitchen"},
-    {src:"images/upstairs/kitchen-downstairs-view.jpg",cap:"Kitchen (Downstairs View)"},
-    {src:"images/upstairs/office-looking-out.jpg",cap:"Office (Looking Out)"},
-    {src:"images/upstairs/living-room.jpg",cap:"Living Room"},
-    {src:"images/upstairs/living-room-revised.jpg",cap:"Living Room"},
-    {src:"images/upstairs/hallway.jpg",cap:"Hallway"},
-    {src:"images/upstairs/laundry.jpg",cap:"Laundry"},
-    {src:"images/upstairs/master-bedroom.jpg",cap:"Master Bedroom"},
-    {src:"images/upstairs/master-bath-1.jpg",cap:"Master Bath"},
-    {src:"images/upstairs/master-bath-2.jpg",cap:"Master Bath"},
-    {src:"images/upstairs/master-bath-3.jpg",cap:"Master Bath"},
-    {src:"images/upstairs/main-bath.jpg",cap:"Main Bath"},
-    {src:"images/upstairs/master-vanity-1.jpg",cap:"Master Vanity"},
-    {src:"images/upstairs/master-vanity-2.jpg",cap:"Master Vanity"},
-    {src:"images/upstairs/master-vanity-3.jpg",cap:"Master Vanity"},
-    {src:"images/upstairs/vanity-balcony.jpg",cap:"Vanity Balcony"},
-    {src:"images/upstairs/bedroom-by-master.jpg",cap:"Bedroom By Master"},
-    {src:"images/upstairs/bedroom-by-master-inside.jpg",cap:"Bedroom By Master (Inside)"},
-    {src:"images/upstairs/bathroom-1.jpg",cap:"Bathroom"},
-    {src:"images/upstairs/bathroom-2.jpg",cap:"Bathroom"},
-    {src:"images/basement/living.jpg",cap:"Basement Living Area"},
-    {src:"images/basement/kitchen.jpg",cap:"Basement Kitchenette"},
-    {src:"images/basement/dining-room.jpg",cap:"Basement Dining Room"},
-    {src:"images/basement/stairs-up.jpg",cap:"Stairs Up"},
-    {src:"images/basement/stairs-down.jpg",cap:"Stairs Down"},
-    {src:"images/basement/wood-stove-1.jpg",cap:"Wood Stove"},
-    {src:"images/basement/wood-stove-2.jpg",cap:"Wood Stove"},
-    {src:"images/basement/master-1.jpg",cap:"Basement Master Bedroom"},
-    {src:"images/basement/master-2.jpg",cap:"Basement Master Bedroom"},
-    {src:"images/basement/master-3.jpg",cap:"Basement Master Bedroom"},
-    {src:"images/basement/bedroom.jpg",cap:"Basement Bedroom"},
-    {src:"images/basement/bedroom-closet.jpg",cap:"Basement Bedroom Closet"},
-    {src:"images/basement/bathroom-1.jpg",cap:"Basement Bathroom"},
-    {src:"images/basement/bathroom-2.jpg",cap:"Basement Bathroom"}
-];
-let currentIdx = 0;
-function openLightbox(i) {
-    currentIdx = i;
-    document.getElementById('lb-img').src = photos[i].src;
-    document.getElementById('lb-caption').textContent = photos[i].cap;
-    document.getElementById('lightbox').classList.add('active');
-}
-function closeLightbox() {
-    document.getElementById('lightbox').classList.remove('active');
-}
-function navLightbox(dir) {
-    currentIdx = (currentIdx + dir + photos.length) % photos.length;
-    document.getElementById('lb-img').src = photos[currentIdx].src;
-    document.getElementById('lb-caption').textContent = photos[currentIdx].cap;
-}
-document.addEventListener('keydown', e => {
-    if (!document.getElementById('lightbox').classList.contains('active')) return;
-    if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowLeft') navLightbox(-1);
-    if (e.key === 'ArrowRight') navLightbox(1);
-});
-</script>
-
-</body>
+    <script>
+      const photos = [
+        { src: "images/exterior/front-of-house.jpg", cap: "Front of House" },
+        { src: "images/exterior/front-porch.jpg", cap: "Front Porch" },
+        { src: "images/exterior/right-side.jpg", cap: "Right Side of House" },
+        { src: "images/exterior/solar-panels.jpg", cap: "Solar Panels" },
+        {
+          src: "images/exterior/yard-toward-panels.jpg",
+          cap: "Yard toward Panels",
+        },
+        { src: "images/exterior/basement-deck.jpg", cap: "Basement Deck" },
+        { src: "images/exterior/balcony.jpg", cap: "Balcony" },
+        { src: "images/exterior/entry.jpg", cap: "Entry" },
+        { src: "images/upstairs/kitchen.jpg", cap: "Kitchen" },
+        {
+          src: "images/upstairs/kitchen-downstairs-view.jpg",
+          cap: "Kitchen (Downstairs View)",
+        },
+        {
+          src: "images/upstairs/office-looking-out.jpg",
+          cap: "Office (Looking Out)",
+        },
+        { src: "images/upstairs/living-room.jpg", cap: "Living Room" },
+        { src: "images/upstairs/living-room-revised.jpg", cap: "Living Room" },
+        { src: "images/upstairs/hallway.jpg", cap: "Hallway" },
+        { src: "images/upstairs/laundry.jpg", cap: "Laundry" },
+        { src: "images/upstairs/master-bedroom.jpg", cap: "Master Bedroom" },
+        { src: "images/upstairs/master-bath-1.jpg", cap: "Master Bath" },
+        { src: "images/upstairs/master-bath-2.jpg", cap: "Master Bath" },
+        { src: "images/upstairs/master-bath-3.jpg", cap: "Master Bath" },
+        { src: "images/upstairs/main-bath.jpg", cap: "Main Bath" },
+        { src: "images/upstairs/master-vanity-1.jpg", cap: "Master Vanity" },
+        { src: "images/upstairs/master-vanity-2.jpg", cap: "Master Vanity" },
+        { src: "images/upstairs/master-vanity-3.jpg", cap: "Master Vanity" },
+        { src: "images/upstairs/vanity-balcony.jpg", cap: "Vanity Balcony" },
+        {
+          src: "images/upstairs/bedroom-by-master.jpg",
+          cap: "Bedroom By Master",
+        },
+        {
+          src: "images/upstairs/bedroom-by-master-inside.jpg",
+          cap: "Bedroom By Master (Inside)",
+        },
+        { src: "images/upstairs/bathroom-1.jpg", cap: "Bathroom" },
+        { src: "images/upstairs/bathroom-2.jpg", cap: "Bathroom" },
+        { src: "images/basement/living.jpg", cap: "Basement Living Area" },
+        { src: "images/basement/kitchen.jpg", cap: "Basement Kitchenette" },
+        { src: "images/basement/dining-room.jpg", cap: "Basement Dining Room" },
+        { src: "images/basement/stairs-up.jpg", cap: "Stairs Up" },
+        { src: "images/basement/stairs-down.jpg", cap: "Stairs Down" },
+        { src: "images/basement/wood-stove-1.jpg", cap: "Wood Stove" },
+        { src: "images/basement/wood-stove-2.jpg", cap: "Wood Stove" },
+        { src: "images/basement/master-1.jpg", cap: "Basement Master Bedroom" },
+        { src: "images/basement/master-2.jpg", cap: "Basement Master Bedroom" },
+        { src: "images/basement/master-3.jpg", cap: "Basement Master Bedroom" },
+        { src: "images/basement/bedroom.jpg", cap: "Basement Bedroom" },
+        {
+          src: "images/basement/bedroom-closet.jpg",
+          cap: "Basement Bedroom Closet",
+        },
+        { src: "images/basement/bathroom-1.jpg", cap: "Basement Bathroom" },
+        { src: "images/basement/bathroom-2.jpg", cap: "Basement Bathroom" },
+      ];
+      let currentIdx = 0;
+      function openLightbox(i) {
+        currentIdx = i;
+        document.getElementById("lb-img").src = photos[i].src;
+        document.getElementById("lb-caption").textContent = photos[i].cap;
+        document.getElementById("lightbox").classList.add("active");
+      }
+      function closeLightbox() {
+        document.getElementById("lightbox").classList.remove("active");
+      }
+      function navLightbox(dir) {
+        currentIdx = (currentIdx + dir + photos.length) % photos.length;
+        document.getElementById("lb-img").src = photos[currentIdx].src;
+        document.getElementById("lb-caption").textContent =
+          photos[currentIdx].cap;
+      }
+      document.addEventListener("keydown", (e) => {
+        if (!document.getElementById("lightbox").classList.contains("active"))
+          return;
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowLeft") navLightbox(-1);
+        if (e.key === "ArrowRight") navLightbox(1);
+      });
+    </script>
+  </body>
 </html>
