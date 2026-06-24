@@ -7,6 +7,7 @@
     <meta name="description" content="5 bed, 3 bath home on 1.03 acres in Forsyth, MO. Solar powered, massive carport, walkout basement. $329,000. For Sale By Owner.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body { font-family: 'Segoe UI', Arial, sans-serif; color: #222; background: #fff; }
 
         .hero {
@@ -156,6 +157,33 @@
         }
         .cta-btn:hover { background: #256428; }
 
+        .side-nav {
+            position: fixed;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            z-index: 900;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .side-nav a {
+            background: #1b3a1b;
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: background 0.2s;
+        }
+        .side-nav a:hover { background: #2e7d32; }
+        @media (max-width: 600px) {
+            .side-nav { right: 5px; }
+            .side-nav a { padding: 6px 8px; font-size: 11px; }
+        }
+
         footer {
             text-align: center;
             padding: 15px;
@@ -175,8 +203,19 @@
 </head>
 <body>
 
+<!-- SIDE NAV -->
+<nav class="side-nav">
+    <a href="#top">Top</a>
+    <a href="#about">About</a>
+    <a href="#solar">Solar</a>
+    <a href="#exterior">Exterior</a>
+    <a href="#main-level">Main Level</a>
+    <a href="#basement">Basement</a>
+    <a href="#contact">Contact</a>
+</nav>
+
 <!-- HERO -->
-<div class="hero">
+<div class="hero" id="top">
     <img src="images/hero.jpg" alt="267 Dickens Cir, Forsyth MO - Front of Home">
     <div class="hero-overlay">
         <span class="tag">FOR SALE BY OWNER</span>
@@ -197,7 +236,7 @@
 </div>
 
 <!-- ABOUT -->
-<div class="section">
+<div class="section" id="about">
     <div class="container">
         <h2>About the Property</h2>
         <div class="features">
@@ -283,7 +322,7 @@
 <!-- PHOTO GALLERY -->
 <div class="section" id="photos">
     <div class="container">
-        <h2>Exterior</h2>
+        <h2 id="exterior">Exterior</h2>
         <div class="gallery-grid">
             <div><img src="images/exterior/front-of-house.jpg" alt="Front of House" onclick="openLightbox(0)"><div class="caption">Front of House</div></div>
             <div><img src="images/exterior/front-porch.jpg" alt="Front Porch" onclick="openLightbox(1)"><div class="caption">Front Porch</div></div>
@@ -294,7 +333,7 @@
             <div><img src="images/exterior/basement-deck.jpg" alt="Basement Deck" onclick="openLightbox(6)"><div class="caption">Basement Deck</div></div>
         </div>
 
-        <h2 style="margin-top:40px;">Main Level</h2>
+        <h2 style="margin-top:40px;" id="main-level">Main Level</h2>
         <div class="gallery-grid">
             <div><img src="images/upstairs/kitchen.jpg" alt="Kitchen" onclick="openLightbox(7)"><div class="caption">Kitchen</div></div>
             <div><img src="images/upstairs/office.jpg" alt="Office" onclick="openLightbox(8)"><div class="caption">Office</div></div>
@@ -313,7 +352,7 @@
             <div><img src="images/upstairs/bathroom-2.jpg" alt="Upstairs Bathroom 2" onclick="openLightbox(21)"><div class="caption">Bathroom</div></div>
         </div>
 
-        <h2 style="margin-top:40px;">Walkout Basement</h2>
+        <h2 style="margin-top:40px;" id="basement">Walkout Basement</h2>
         <div class="gallery-grid">
             <div><img src="images/basement/living.jpg" alt="Basement Living" onclick="openLightbox(22)"><div class="caption">Living Area</div></div>
             <div><img src="images/basement/kitchen.jpg" alt="Basement Kitchen" onclick="openLightbox(23)"><div class="caption">Kitchenette</div></div>
